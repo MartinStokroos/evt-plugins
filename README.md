@@ -1,13 +1,14 @@
-The BSS Research Support OpenSesame Plugin Collection
+The BSS OpenSesame Plugin Collection
 =====================================================
 
-*An OpenSesame plugin collection for sending stimulus synchronization triggers and response collection through Event Exchanger (EVT-2) USB-devices.*  
+*The OpenSesame plugin collection for sending stimulus synchronization triggers and response collection through Event Exchanger (EVT-2) USB-devices.*  
 
 Copyright 2010-2024 Mark Span (<m.m.span@rug.nl>), M. Stokroos (<m.stokroos@rug.nl>)
 
 Contributions: This code is based on the work of Eise Hoekstra and Mark M. Span. The code is debugged and rewritten for OpenSesame 4 by Martin Stokroos.
 
 ## 1. About
+
 The BSS Research Support OpenSesame Plugin Collection for use with Event Exchanger (EVT-2) USB-devices.
 
 EVT-devices and the associated plugins are developed by the [Research Support](https://myuniversity.rug.nl/infonet/medewerkers/profiles/departments/11422) department from the faculty of Behavioural and Social Sciences from the University of Groningen.
@@ -27,23 +28,23 @@ icon | plugin | Description | OpenSesame back-end | operating system | Status
 ![](opensesame_plugins/evt_plugins/rgb_led_control/rgb_led_control_large.png) | *rgb_led_control* | plugin for multi-color LED response boxes | PyGme | Windows | not validated
 
 ### Package dependencies
-The plugins are dependent on the Python module pyevt and the underlying hidapi package.
 
-[https://pypi.org/project/hidapi/](https://pypi.org/project/hidapi/)
+The plugins are dependent on the Python API pyevt and [hidapi](https://pypi.org/project/hidapi/).
 
 *pyevt* and *hidapi* are installed from the Python Console in OpenSesame with the single command:
 
-`!pip install --user pyevt`
+`pip install --user pyevt`
 
-NOTE: Currently, the plugin package is released as pip package in a test environment. Clone this repository and copy the plugins manually into your OpenSesame python package folder or temporary install from the command line in OpenSesame 4 with:
 
-```
-!pip install --user hidapi
-!pip install --user --index-url https://test.pypi.org/simple/ pyevt
-!pip install --user --index-url https://test.pypi.org/simple/ evt-plugins
-```
+### Installing the plugin Package
+
+The current package version is: 0.2.0
+
+`pip install --user evt-plugins`
+
 
 ### Environmental settings
+
 By default, the OpenSesame 4.0 plugins are installed as python site-package and automatically loaded at the startup.
 When the plugins are located somewhere else, add your path to the python-path of OpenSesame in the `environment.yaml` file in the OpenSesame program directory (The OPENSESAME_plugin_PATH is old style). See for the instructions here: [https://rapunzel.cogsci.nl/manual/environment/](https://rapunzel.cogsci.nl/manual/environment/) 
 
@@ -107,6 +108,7 @@ variable name | description
 This plugin works for the RSP-LT device, a response-box with RGB-controlled LED buttons.
 
 ## 3. LICENSE
+
 The evt-plugins collection is distributed under the terms of the GNU General Public License 3.
 The full license should be included in the file COPYING, or can be obtained from
 
@@ -115,6 +117,7 @@ The full license should be included in the file COPYING, or can be obtained from
 This plugin collection contains the work of others.
 
 ## 4. Documentation
+
 Installation instructions and documentation on OpenSesame are available on the documentation website:
 
 [http://osdoc.cogsci.nl/](http://osdoc.cogsci.nl/)
